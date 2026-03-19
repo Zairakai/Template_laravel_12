@@ -3,7 +3,7 @@
 PHP_SERVICE  ?= php
 NODE_SERVICE ?= node
 
-.PHONY: up down restart shell shell-node logs docker-ci docker-quality docker-test
+.PHONY: up down restart shell shell-node logs docker-ci docker-quality docker-test front-dev front-build
 
 up: ## Start all Docker services
 	docker compose up -d
@@ -31,3 +31,9 @@ docker-quality: ## Run quality checks inside the PHP container
 
 docker-test: ## Run PHP tests inside the PHP container
 	docker compose exec $(PHP_SERVICE) make test
+
+front-dev: ## Start Vite dev server in Node container (HMR)
+	docker compose exec $(NODE_SERVICE) npm run dev
+
+front-build: ## Build front-end assets for production in Node container
+	docker compose exec $(NODE_SERVICE) npm run build
