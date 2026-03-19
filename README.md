@@ -62,6 +62,10 @@ exit
 > **Note:** `composer install` and `npm install` automatically configure dev-tools
 > (Makefile targets, quality configs, git hooks) via their respective `postinstall` hooks.
 > Run `make help` to see all available targets.
+>
+> **JS targets** (`package-install`, `package-update`, ESLint, Stylelint, Knip, TypeScript…)
+> are only available after `npm install` — `fullstack.mk` loads them conditionally from
+> `node_modules/@zairakai/js-dev-tools`. Run `npm install` before using any JS-related make target.
 
 ## Usage
 
