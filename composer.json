@@ -34,10 +34,10 @@
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.3",
         "laravel/tinker": "^2.11",
-        "zairakai/laravel-activity": "^1.0",
-        "zairakai/laravel-blade-components": "^1.0",
-        "zairakai/laravel-eloquent": "^1.0",
-        "zairakai/laravel-essentials": "^1.0"
+        "zairakai/laravel-activity": "^2.0",
+        "zairakai/laravel-blade-components": "^2.0",
+        "zairakai/laravel-eloquent": "^2.0",
+        "zairakai/laravel-essentials": "^2.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.50",
@@ -48,7 +48,7 @@
         "nunomaduro/collision": "^8.9",
         "pestphp/pest": "^4.4",
         "pestphp/pest-plugin-laravel": "^4.1",
-        "zairakai/laravel-dev-tools": "^1.0"
+        "zairakai/laravel-dev-tools": "^2.0"
     },
     "autoload": {
         "psr-4": {
