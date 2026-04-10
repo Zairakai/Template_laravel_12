@@ -27,11 +27,11 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            User::resolveColumn('name')            => fake()->name(),
-            User::resolveColumn('email')           => fake()->unique()->safeEmail(),
-            User::resolveColumn('emailVerifiedAt') => now(),
-            User::resolveColumn('password')        => (static::$password ??= Hash::make('password')),
-            User::resolveColumn('rememberToken')   => Str::random(10),
+            User::resolveColumn('name')             => fake()->name(),
+            User::resolveColumn('email')            => fake()->unique()->safeEmail(),
+            User::resolveColumn('emailVerifiedAt')  => now(),
+            User::resolveColumn('password')         => (static::$password ??= Hash::make('password')),
+            User::resolveColumn('rememberToken')    => Str::random(10),
         ];
     }
 
