@@ -94,10 +94,10 @@ abstract class BaseController extends Controller
             $class    = $caller['class']    ?? static::class;
             $function = $caller['function'] ?? 'unknown';
             $line     = isset($caller['line'])
-                ? " (L{$caller['line']})"
+                ? sprintf(' (L%d)', $caller['line'])
                 : '';
 
-            Log::warning("Prefer a JsonResource over a raw array in {$class}::{$function}(){$line}.");
+            Log::warning(sprintf('Prefer a JsonResource over a raw array in %s::%s()%s.', $class, $function, $line));
         }
 
         return response()

@@ -1,4 +1,4 @@
-import { createI18n, type TranslationData } from '@zairakai/js-i18n'
+import { type TranslationData, createI18n } from '@zairakai/js-i18n'
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { availableLocales, defaultLocale, fallbackLocale, transEndpoint } from '../config/i18n'

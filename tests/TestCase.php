@@ -72,7 +72,7 @@ abstract class TestCase extends BaseTestCase
             Assert::assertArrayHasKey(
                 $field,
                 $errors,
-                "Expected validation error for field [{$field}].",
+                sprintf('Expected validation error for field [%s].', $field),
             );
         }
     }
