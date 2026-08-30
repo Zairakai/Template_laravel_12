@@ -29,10 +29,10 @@ class TransController extends Controller
     public function __invoke(string $lang): JsonResponse
     {
         $strings = Cache::remember(
-            "lang-{$lang}",
+            'lang-' . $lang,
             $this->cacheDuration,
             function () use ($lang): array {
-                $globResult = glob(base_path("lang/{$lang}/*.php"));
+                $globResult = glob(base_path(sprintf('lang/%s/*.php', $lang)));
 
                 /** @var array<int, string> $files */
                 $files = false !== $globResult ? $globResult : [];
