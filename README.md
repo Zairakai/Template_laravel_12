@@ -16,7 +16,7 @@ Search and replace the following across the project before anything else:
 | Placeholder | Example | Files |
 | :--- | :--- | :--- |
 | `{{VENDOR}}` | `zairakai` | `composer.json` |
-| `{{APP_SLUG}}` | `my-app` | `composer.json`, `package.json`, `.env.example`, `.env.production` |
+| `{{APP_SLUG}}` | `my-app` | `composer.json`, `package.json`, `package-lock.json`, `.env.example`, `.env.production`, `.gitlab-ci.yml` |
 | `{{APP_NAME}}` | `My App` | `README.md`, `composer.json`, `.env.example`, `.env.production` |
 | `{{APP_DESCRIPTION}}` | `Short description` | `README.md`, `package.json` |
 | `{{GITLAB_PATH}}` | `zairakai/apps/my-app` | `composer.json`, `package.json` |
